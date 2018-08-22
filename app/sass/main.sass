@@ -2,26 +2,63 @@
 @import "fonts"
 @import "libs"
 
-::placeholder
-	color: #666
-
-::selection
-	color: #fff
-
 body
 	font-size: 62.5%
 	min-width: 320px
 	position: relative
 	font-family: $default-font
 	overflow-x: hidden
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+input, textarea
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+  background-color: transparent
+  border: 2px solid rgb(233, 238, 242)
+  outline: none
+  width: 100%
+  margin-bottom: 2rem
+  padding: 1.8rem
+  color: $light_gray
+  font-size: 1.7em
+  resize: none
 
+.button
+  padding: 1rem 5rem
+  background-color: $blue_gray
+  border-radius: .3rem
+  color: $white
+  text-transform: capitalize
+  font-size: 2.1em
+  outline: none
+button.button
+  width: 100%
+  cursor: pointer
+  border: none
+  color: #2d3035
+  font-size: 1.8em
+  font-weight: 700
+  &:focus
+    outline: none
+
+*::-webkit-input-placeholder
+  color: $light_gray
+
+  opacity: 1
+
+*:-moz-placeholder
+  color: $light_gray
+
+  opacity: 1
+
+*::-moz-placeholder
+  color: $light_gray
+
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: $light_gray
+
+  opacity: 1
 .img-responsive
 	display: block
 	max-width: 100%
@@ -69,17 +106,18 @@ header
 	color: $white
 
 .centered_block
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
 
 h2
-	font-size: 3.8em
-	font-weight: 700
-	margin: 0
-	&.white
-		color: $white
+  font-size: 3.8em
+  font-weight: 700
+  text-align: center
+  margin: 0
+  &.white
+	  color: $white
 .subtitle
 	padding-top: 2rem
 	padding-bottom: 5.4rem
@@ -90,14 +128,7 @@ h2
 	&.gray
 		color: $gray
 		font-size: 1.6em
-.button
-	padding: 1rem 5rem
-	background-color: $blue_gray
-	border-radius: .3rem
-	color: $white
-	text-transform: capitalize
-	font-size: 2.1em
-	outline: none
+
 .section
 	padding-top: 8rem
 	padding-right: 3.5rem
@@ -117,4 +148,78 @@ h2
 	background-image: url(../img/next.png)
 .swiper-button-prev
 	transform: rotate(180deg)
+.cards_block
+  padding-bottom: 7.6rem
+  h2
+    font-size: 3em
+  .text
+     color: #98a0a5
+     font-size: 1.5em
+     text-align: center
+     margin-top: 5rem
+.card
+	&_title
+		font-size: 3em
+		font-weight: 300
+		min-height: 5rem
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		color: $light_gray
+		border-top-left-radius: .3rem
+		border-top-right-radius: .3rem
+		p
+			font-weight: 400
+			font-size: .5em
+			margin: 0
+			margin-top: -.5rem
+		&.gray
+			background-color: $dark_gray
+		&.green
+			background-color: $green
+		&.blue
+			background-color: $blue
+	&_desc
+		padding: 4rem 0
+		background-color: $light_gray
+		border-bottom-left-radius: .3rem
+		border-bottom-right-radius: .3rem
+		p
+			font-size: 2.1em
+			font-weight: 400
+			text-align: center
+			margin-bottom: 5rem
+			&:last-of-type
+				margin-bottom: 0
+			&:first-of-type
+				font-weight: 700
+.card_btn
+  width: 100%
+  display: block
+  padding: 2rem 0
+  text-align: center
+  color: #e9eef2
+  text-transform: capitalize
+  font-size: 1.8em
+  margin-top: 2rem
+  border-radius: .3rem
+  &.gray
+    background-color: $dark_gray
+  &.green
+    background-color: $green
+  &.blue
+    background-color: $blue
+.form_block
+  background-color: $dark_gray
+  padding-bottom: 8rem
+  form
+    margin-bottom: 4rem
+  .social_links
+    display: flex
+    justify-content: center
+    a
+      margin-right: 1rem
+      &:last-of-type
+        margin-right: 0
 @import "media" // Always at the end
