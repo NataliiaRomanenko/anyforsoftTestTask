@@ -34,7 +34,77 @@ body
 
 b, strong
 	font-weight: bold
+ul
+	li
+		list-style: none
 
+header
+	background-image: url(../img/banner.png)
+	background-position: center
+	background-repeat: no-repeat
+	-webkit-background-size: cover
+	background-size: cover
+	padding-top: 4rem
+	padding-bottom: 10rem
 
+.nav_wrapper
+	position: relative
+	.navbar
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.navbar_nav
+			display: flex
+.nav_link
+	margin-left: 1.5rem
+	font-size: 1.6em
+	color: $light_gray
+	font-weight: 700
+	text-transform: capitalize
+	display: block
 
+.navbar_brand
+	font-weight: 300
+	font-size: 4.8em
+	color: $white
+
+.centered_block
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+h2
+	font-size: 3.8em
+	font-weight: 700
+	margin: 0
+	&.white
+		color: $white
+.subtitle
+	padding-top: 2rem
+	padding-bottom: 5.4rem
+	text-align: center
+	&.white
+		color: $white
+		font-size: 2.1em
+	&.gray
+		color: $gray
+		font-size: 1.6em
+.button
+	padding: 1rem 5rem
+	background-color: $blue_gray
+	border-radius: .3rem
+	color: $white
+	text-transform: capitalize
+	font-size: 2.1em
+	outline: none
+.section
+	padding-top: 8rem
+	padding-right: 3.5rem
+	padding-left: 3.5rem
+
+.info_block
+	padding-bottom: 10rem
+.slider_block
+	background-color: $blue_gray
 @import "media" // Always at the end
