@@ -8,12 +8,13 @@ html
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
 body
-	font-size: 62.5%
-	min-width: 320px
-	position: relative
-	font-family: $default-font
-	overflow-x: hidden
-    background-color: #fcfcfc
+  font-size: 62.5%
+  min-width: 320px
+  position: relative
+  font-family: $default-font
+  overflow-x: hidden
+  background-color: #fcfcfc
+
 input, textarea
   -webkit-border-radius: 3px
   -moz-border-radius: 3px
@@ -248,5 +249,66 @@ h2
   .navbar_nav
     .nav_link
       color: $dark_gray
+.navBurger
+  display: none
+  position: fixed
+  right: 20px
+  top: 20px
+  cursor: pointer
+  background: $white
+  box-sizing: border-box
+  background-clip: content-box
+  width: 30px
+  height: 24px
+  border-top: 11px solid transparent
+  border-bottom: 11px solid transparent
+  -webkit-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: all 0.25s ease-in-out
+  transition: all 0.25s ease-in-out
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    background: $white
+    height: 2px
+    width: 100%
+    right: 0
+    will-change: rotate
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: all 0.5s ease
+    transition: all 0.5s ease
+  &:before
+    top: -10px
+  &:after
+    bottom: -10px
+  &.active
+    background: transparent
+    background-clip: content-box
+  &.active:before
+    -webkit-transform: rotate(135deg)
+    transform: rotate(135deg)
+    top: 0
+    background: #eee
+    width: 100%
+  &.active:after
+    bottom: 0
+    -webkit-transform: rotate(-135deg)
+    transform: rotate(-135deg)
+    background: #eee
+    width: 100%
+.locked
+  overflow: hidden
+
+@keyframes fadeInRight
+  0%
+    opacity: 0
+    opacity: 0
+    left: 50px
+  100%
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
 
 @import "media" // Always at the end
