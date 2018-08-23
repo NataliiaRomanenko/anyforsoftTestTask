@@ -32,6 +32,7 @@ $(function() {
             }
         };
     }
+
     $(window).scroll(sticky);
     $(window).resize(sticky);
     $(document).on("scrollstop",sticky);
