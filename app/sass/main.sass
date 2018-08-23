@@ -15,6 +15,9 @@ body
   overflow-x: hidden
   background-color: #fcfcfc
   line-height: 1.3
+.blur_bg
+  -webkit-filter: blur(10px)
+  filter: blur(10px)
 
 input, textarea
   -webkit-border-radius: 3px
@@ -120,9 +123,15 @@ ul
 		list-style: none
 a
   transition: all .5s linear
-  &:hover
+  &:hover,
+  &:focus,
+  &:active
     text-decoration: none
     color: $light_gray
+    text-decoration-color: transparent
+    -moz-text-decoration-color: transparent
+    outline: none
+
 header
 	background-image: url(../img/banner.png)
 	background-position: center
@@ -413,6 +422,40 @@ h2
     width: 100%
 .locked
   overflow: hidden
+.thanks
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  height: 100vh
+  width: 100vw
+  background-color: rgba(0, 151, 222, .8)
+  z-index: 10
+  -webkit-transform: scaleX(0)
+  transform: scaleX(0)
+  -webkit-transition: all 0.5s ease
+  transition: all 0.5s ease
+
+  .wrapp
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 10%
+    p
+      &:first-of-type
+        color: #0097de
+        font-weight: 700
+        font-size: 2em
+        padding: 10px 12px
+        background-color: #fff
+      &:last-of-type
+        color: #fff
+        font-weight: 300
+        font-size: 7.8em
+  &.active
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)
 
 @keyframes fadeInRight
   0%

@@ -37,4 +37,19 @@ $(function() {
     $(window).resize(sticky);
     $(document).on("scrollstop",sticky);
 
+    $("#form_btn_send").click(function() {
+        console.log('setBtnClass');
+        $(".thanks").addClass("active");
+        $("header").addClass('blur_bg');
+        setTimeout(function(){
+            console.log('removeBtnClass');
+            $('.thanks.active').removeClass('active')
+            $("header").removeClass('blur_bg');
+        },2000);
+    });
+
+
+
+
+
 });
