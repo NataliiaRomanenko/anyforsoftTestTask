@@ -40,6 +40,7 @@ input, textarea
   outline: none
   border: 1px solid transparent
   position: relative
+  transition: color .5s linear
   &:before,
   &:after
     content: ""
@@ -61,6 +62,7 @@ input, textarea
     border-bottom: 1px solid white
     transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s
   &:hover
+    color: $light_gray
     &:before,
     &:after
       height: 100%
@@ -153,11 +155,31 @@ header
   display: flex
   margin-bottom: 0
 .nav_link
-	margin-left: 15px
-	font-size: 1.6em
-	color: $light_gray
-	font-weight: 700
-	text-transform: capitalize
+  margin-left: 15px
+  font-size: 1.6em
+  color: $light_gray
+  font-weight: 700
+  text-transform: capitalize
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -10px
+    display: block
+    width: 100%
+    height: 3px
+    border-radius: 3px
+    background: $light_gray
+    -webkit-transform: scaleX(0)
+    transform: scaleX(0)
+    -webkit-transition: .5s
+    transition: .5s
+  &:hover
+    &:after
+      -webkit-transform: scaleX(1)
+      transform: scaleX(1)
+
 
 
 .navbar_brand
@@ -338,6 +360,8 @@ h2
   .navbar_nav
     .nav_link
       color: $dark_gray
+      &:after
+        background: $dark_gray
 .navBurger
   display: none
   position: absolute
