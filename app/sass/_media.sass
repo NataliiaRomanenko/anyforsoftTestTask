@@ -15,7 +15,23 @@
     p
       font-size: 1.8em
       margin-bottom: 30px
-
+@media(max-width: 991px)
+  .footer_wrapper
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .footer_subtext
+      order: 2
+      font-size: 1.2em
+      text-align: center
+  .footer_navbar_nav
+    padding-bottom: 10px
+    width: 100%
+    .navbar_nav
+      justify-content: space-around
+      padding: 0
+      .nav_link
+        margin-left: 0
 @media(max-width: 767px)
   .navBurger
     display: block
@@ -75,28 +91,13 @@
     .text
       margin-top: 20px
       font-size: 1.2em
-  .footer_wrapper
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    .footer_subtext
-      order: 2
-      font-size: 1.2em
-      text-align: center
-  .footer_navbar_nav
-    padding-bottom: 10px
-    width: 100%
-    .navbar_nav
-      justify-content: space-around
-      padding: 0
-      .nav_link
-        margin-left: 0
+
   .thanks
     .wrapp
       p
         &:last-of-type
           font-size: 5em
-@media(max-width: 767px) and(orientation:landscape)
+@media(max-width: 767px) and (orientation: landscape)
   .overlay
     &.open
       .navbar_nav
@@ -106,24 +107,24 @@
     .footer_subtext
       font-size: 1em
 /* width container */
-@media only screen and (min-width : 480px)
+@media (min-width : 480px)
   .container
     max-width: 540px
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
+@media (min-width : 768px)
   .container
     max-width: 720px
 
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
+@media (min-width : 992px)
   .container
     max-width: 960px
 
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
+@media (min-width : 1200px)
   .container
   max-width: 1000px
 
