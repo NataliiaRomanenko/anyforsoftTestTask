@@ -48,9 +48,4 @@ $(function() {
             $(".container").removeClass('blur_bg');
         },2000);
     });
-
-
-
-
-
 });
